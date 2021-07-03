@@ -129,6 +129,7 @@ section img#stars{
     font-size: 7.5vw;
     z-index: 9;
     right: -420px;
+    opacity: 0%;
 }
 
 #btn{

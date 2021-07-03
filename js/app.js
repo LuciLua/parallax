@@ -16,6 +16,7 @@ window.addEventListener('scroll', function(){
     text.style.marginTop = value * 0.4 + 'px'
     btn.style.marginTop = value * 0.4 + 'px'
     header.style.top = value * 0.7 + 'px'
-
+    text.style.fontSize = 7.5 + 'vh' +  value * 0.2 + 'px'
+    text.style.opacity = value * 0.25 + '%'
 })
 
