@@ -73,10 +73,13 @@ section{
 
     position: relative;
     width: 100%;
+    /* padding: 100px; */
+
     height: 100vh;
-    padding: 100px;
 
     overflow: hidden;
+
+    scroll-snap-type: mandatory;
 }
 
 section::before{
@@ -88,7 +91,7 @@ section::before{
     height: 100px;
 
     background: linear-gradient(to top, #151516, rgba(213, 14, 14, 0));
-    z-index: 100000;
+    z-index: 100;
 }
 
 section img{
@@ -109,19 +112,21 @@ section #montain{
     background-color: transparent;
     transform: rotateZ(315deg);
     position: absolute;
-    z-index: 1000;
     top: 20vh;
     
     border-right: none;
     border-top: none;
     border-left: 10px rgb(0, 0, 0) solid;
     border-bottom: 10px rgb(0, 0, 0) solid;
+
+    z-index: 2000;
 }
 
 
 .texton{
     opacity: 0%;
     /* animation: fadein 2s linear; */
+    text-align: justify;
 }
 
 section img#moon{
@@ -160,11 +165,11 @@ section img#road{
 section #stars{
 
     top: 30vh;
-font-size: 40px;
-position: absolute;
+    font-size: 40px;
+    position: absolute;
 
-color: rgb(0, 0, 0);
-text-shadow: 0 0 10px rgba(175, 175, 175, 0.118);
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 10px rgba(175, 175, 175, 0.118);
 
 }
 
@@ -182,8 +187,8 @@ text-shadow: 0 0 10px rgba(175, 175, 175, 0.118);
     text-decoration: none;
     padding: 8px 30px;
     border-radius: 40px;
-    background-color: #fff;
-    color: #2b1055;
+    background-color: rgb(26, 26, 26);
+    color: #ffffff;
     font-size: 1.5em;
     display: inline-block;
     z-index: 9;
