@@ -12,6 +12,7 @@
 body{
     min-height: 100vh;
     background-color: #ffffff;
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar{
@@ -21,7 +22,11 @@ body{
 .wrap{
     scroll-snap-type: y mandatory;
     /* overflow-y: scroll; */
+    /* overflow-x: hidden; */
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+
 }
 
 section{
@@ -32,25 +37,8 @@ section{
 
     position: relative;
     
-    /* width: 100%; */
     height: 100vh;
-
     scroll-snap-align: start;
-    scroll-snap-stop: always;
-
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior: touch;
-}
-
-section img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
-    pointer-events: none;
 }
 
 section #montain{
@@ -59,11 +47,11 @@ section #montain{
 
     background-color: transparent;
 
-    transform: rotateZ(315deg);
+    transform: rotateZ(225deg);
 
     position: absolute;
-    top: 20vh;
-    left: 50%;
+    top: 36%;
+    left: 20%;
     
     border-right: none;
     border-top: none;
@@ -76,7 +64,6 @@ section #montain{
 
 .texton{
     opacity: 0%;
-    /* animation: fadein 2s linear; */
     text-align: justify;
 }
 
@@ -86,18 +73,31 @@ section img#moon{
 }
 
 section img#road{
-    z-index: 10;
+    z-index: -10;
     filter: grayscale(1) contrast(1.2);
 }
 
 section h1{
-
     top: 30vh;
     font-size: 40px;
     position: absolute;
 
     color: rgb(0, 0, 0);
     text-shadow: 0 0 10px rgba(175, 175, 175, 0.118);
+}
+
+.texto{
+    max-width: 900px;
+    color: #17171a;
+
+    left: 30%;
+    position: absolute;
+    margin-right: 30px;
+
+    top: 45%;
+    font-size: 16px;
+
+    text-align: justify;
 }
 
 #hello{
@@ -107,19 +107,11 @@ section h1{
     position: absolute;
 }
 
-#text{
-    position: absolute;
-    color: #fff;
-    white-space: nowrap;
-    font-size: 7.5vw;
-    z-index: 9;
-    right: -420px;
-    opacity: 0%;
-}
-
 .container{
     height: 100vh;
     padding: 100px;
+
+    max-width: 900px;
 
     display: flex;
     justify-content: center;
@@ -127,13 +119,34 @@ section h1{
     flex-direction: column;
 }
 
+.container img{
+    object-fit: contain;
+    width: 100%;
+    max-height: 40vh;
+    height: 100%;
+    left: -300px;
+    position: absolute;
+    z-index: -10;
+
+    opacity: 100%;
+    bottom: 0;
+}
+
+.container h1{
+    white-space: nowrap;
+}
+
 .container h2{
     font-size: 3.5em;
     margin-bottom: 10px;
     color: #fff;
+
+    line-height: 1.2;
+    margin-bottom: 5vh;
 }
 
-.container p{
+section .texton,
+section .textonD{
     font-size: 1em;
     color: rgb(225, 225, 225);
     line-height: 2;
@@ -141,6 +154,7 @@ section h1{
 
 section:nth-of-type(2){
     background-color: #17171a;
+    
 }
 
 section:nth-of-type(3){
@@ -149,44 +163,6 @@ section:nth-of-type(3){
 
 section:nth-of-type(4){
     background-color: #17171a;
-}
-
-
-.area{
-
-    height: 100%;
-    width: 100%;
-
-    /* display: flex; */
-
-    background-color: rgb(125, 109, 141);
-}
-
-
-#drag-1, #drag-2 {
-    width: 30%;
-    height: 20%;
-    min-height: 6.5em;
-    margin: 1rem 0 0 1rem;
-    background-color: #29e;
-    color: white;
-    border-radius: 0.75em;
-    padding: 4%;
-    touch-action: none;
-    user-select: none;
-    transform: translate(0px, 0px);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    cursor: pointer;
-}
-
-
-#drag-1:active, #drag-2:active{
-    cursor: move;
-    background-color: #276ae6;
 }
 
 
