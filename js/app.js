@@ -15,7 +15,7 @@ window.addEventListener('scroll', function(){
     retr.style.opacity = 0 + value * 0.05 + '%'
 
     
-    texto.style.top = 45 + value * 0.04 + '%'
+    texto.style.top = 50 + value * 0.04 + '%'
     texto.style.opacity = 100 - value * 0.4 + '%'
     
     if(value * 2 > 1000){
