@@ -89,9 +89,8 @@ section h1{
 
 .container{
     height: 100vh;
-    padding: 100px;
 
-    /* max-width: 900px; */
+    padding: 25px;
     max-width: 100%;
 
     display: flex;
@@ -113,10 +112,16 @@ section h1{
     z-index: -10;
     
     position: absolute;
-    left: calc(0px - 20vw);
+
+    opacity: 0%;
     bottom: 0;
 
-    opacity: 100%;
+    z-index: 100;
+    filter: blur(10px);
+}
+
+.container img:active{
+    filter: blur(0px);
 }
 
 .container h1{
@@ -141,6 +146,8 @@ section .textonD{
     font-size: 1em;
     color: rgb(225, 225, 225);
     line-height: 2;
+    max-width: 1300px;
+    min-width: 90%;
 }
 
 section:nth-of-type(2){
